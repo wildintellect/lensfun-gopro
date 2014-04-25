@@ -8,15 +8,29 @@
 		<maker>GoPro</maker>
 		<model>HD2</model>
         <mount>Hero</mount>
+        <cropfactor>6.4</cropfactor>
 	</camera>
 
     <lens>
 		<maker>GoPro</maker>
-		<model>HD2 Color</model>
-        <mount>Hero</mount>
+		<mount>Hero</mount>
+        <model>Rect</model>
         <type>rectilinear</type>
-		<cropfactor>6.4</cropfactor>
-        <aperature value="2.8"/>
+        <cropfactor>1.0</cropfactor>
+		<aperture value="2.8"/>
+        <focal value="2.5" />
+		<calibration>
+			<distortion model="ptlens" focal="2.5" a="0.00102" b="0.05401" c="-0.44913" />
+		</calibration>
+	</lens>
+
+    <lens>
+		<maker>GoPro</maker>
+		<mount>Hero</mount>
+        <model>Fish</model>
+        <type>fisheye</type>
+        <cropfactor>1.0</cropfactor>
+		<aperture value="2.8"/>
         <focal value="2.5" />
 		<calibration>
 			<distortion model="ptlens" focal="2.5" a="0.00102" b="0.05401" c="-0.44913" />
