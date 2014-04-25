@@ -1,0 +1,27 @@
+<lensdatabase>
+
+    <mount>
+        <name>Hero</name>
+    </mount>
+
+    <camera>
+		<maker>GoPro</maker>
+		<model>HD2</model>
+        <mount>Hero</mount>
+	</camera>
+
+    <lens>
+		<maker>GoPro</maker>
+		<model>HD2 Color</model>
+        <mount>Hero</mount>
+        <type>rectilinear</type>
+		<cropfactor>6.4</cropfactor>
+        <aperature value="2.8"/>
+        <focal value="2.5" />
+		<calibration>
+			<distortion model="ptlens" focal="2.5" a="0.00102" b="0.05401" c="-0.44913" />
+		</calibration>
+	</lens>
+
+
+</lensdatabase>
