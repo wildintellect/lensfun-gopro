@@ -5,18 +5,43 @@
     </mount>
 
     <camera>
+        <!-- Using true Crop Factor --> 
 		<maker>GoPro</maker>
 		<model>HD2</model>
         <mount>Hero</mount>
         <cropfactor>6.4</cropfactor>
 	</camera>
 
+    <camera>
+        <!-- Faking with no crop factor --> 
+		<maker>GoPro</maker>
+		<model>HD2 16mm</model>
+        <mount>Hero</mount>
+        <cropfactor>1</cropfactor>
+	</camera>
+
     <lens>
+        <!-- Much closer to rigtht with a different calibration photo set. --> 
+		<maker>GoPro</maker>
+		<mount>Hero</mount>
+        <model>default</model>
+        <type>rectilinear</type>
+        <cropfactor>1</cropfactor>
+		<aperture value="2.8"/>
+        <focal value="2.5" />
+		<calibration>
+			<distortion model="ptlens" focal="2.5" a="0.005" b="0.03" c="-0.15" />
+		</calibration>
+	</lens>
+   
+    
+     <lens>
+        <!-- Over distorts edges --> 
 		<maker>GoPro</maker>
 		<mount>Hero</mount>
         <model>Rect</model>
         <type>rectilinear</type>
-        <cropfactor>1.0</cropfactor>
+        <cropfactor>1</cropfactor>
 		<aperture value="2.8"/>
         <focal value="2.5" />
 		<calibration>
@@ -25,11 +50,12 @@
 	</lens>
 
     <lens>
+        <!-- Doesn't seem to do anything --> 
 		<maker>GoPro</maker>
 		<mount>Hero</mount>
-        <model>Fish</model>
-        <type>fisheye</type>
-        <cropfactor>1.0</cropfactor>
+        <model>RectCrop</model>
+        <type>rectilinear</type>
+        <cropfactor>5.5</cropfactor>
 		<aperture value="2.8"/>
         <focal value="2.5" />
 		<calibration>
@@ -37,5 +63,35 @@
 		</calibration>
 	</lens>
 
+    <lens>
+        <!-- Same as Rect but using 35mm equivalent --> 
+		<maker>GoPro</maker>
+		<mount>Hero</mount>
+        <model>Rect16</model>
+        <type>rectilinear</type>
+        <cropfactor>1</cropfactor>
+		<aperture value="2.8"/>
+        <focal value="16" />
+		<calibration>
+			<distortion model="ptlens" focal="16" a="0.00102" b="0.05401" c="-0.44913" />
+		</calibration>
+	</lens>
+
+
+    <lens>
+        <!-- Only center isn't stretched --> 
+		<maker>GoPro</maker>
+		<mount>Hero</mount>
+        <model>Fish</model>
+        <type>fisheye</type>
+        <cropfactor>1</cropfactor>
+		<aperture value="2.8"/>
+        <focal value="2.5" />
+		<calibration>
+			<distortion model="ptlens" focal="2.5" a="0.00102" b="0.05401" c="-0.44913" />
+		</calibration>
+	</lens>
+
+    
 
 </lensdatabase>
